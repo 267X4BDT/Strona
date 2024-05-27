@@ -1,0 +1,200 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: ghostwhite;
+    color: black;
+}
+
+header {
+    background-image: url('images/image9.jpg');
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: midnightblue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+            }
+
+main {
+    display: flex;
+    flex-direction: column; /* Zmiana kierunku układu na pionowy */
+    padding: 20px;
+    text-align:center;
+}
+
+article {
+    flex: 2;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: midnightblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .menu > li {
+        position: relative;
+        display: inline-block;
+    }
+
+        .menu > li > a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    box-shadow: 0 8px 16px #003366;
+    z-index: 1;
+    border-radius: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+    .submenu li {
+        display: block;
+    }
+
+        .submenu li a {
+            padding: 10px;
+            color: black;
+            display: block;
+        }
+
+.menu > li:hover > a {
+    background-color: steelblue;
+    height: 100%;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+    .menu li:hover .submenu li:hover a {
+        background-color: lightgrey;
+        width: 100%;
+        border-radius: 10px;
+    }
+article {
+    margin-bottom: 20px;
+}
+
+    article h3 {
+        color: steelblue;
+    }
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    margin-top: 10px;
+}
+
+    .image-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+.menu2 {
+    list-style-type: none;
+    padding: 0;
+    background-color: lightgray;
+    border-radius: 5px;
+    margin-top: 20px; /* Dodajemy margines na górę */
+    padding: 10px; /* Dodajemy wypełnienie */
+}
+
+    .menu2 li {
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        background-color: white;
+    }
+
+    .menu2 h2 {
+        color: steelblue;
+    }
+
+.small-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 10px;
+    width: auto;
+    height: 400px;
+    overflow: hidden;
+}
+
+    .small-gallery img {
+        width: 800px;
+        height: auto;
+        display: none;
+    }
+
+        .small-gallery img.active {
+            display: block;
+        }
+
+    .small-gallery button {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .small-gallery .prev {
+        left: 10px;
+    }
+
+    .small-gallery .next {
+        right: 10px;
+    }
+
+footer {
+    background-color: midnightblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

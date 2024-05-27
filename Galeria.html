@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posterunek Policji</title>
+    <link rel="stylesheet" href="Galeria.css">
+</head>
+<body>
+    <header>
+        <h1>Poszukiwani</h1>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="Szablon - Kopia.html">Strona główna</a></li>
+            <li>
+                <a href="Aktualności.html">Aktualności</a>
+            </li>
+            <li>
+                <a href="#">O policji</a>
+                <ul class="submenu">
+                    <li><a href="Prezentacja.html">Dołącz do nas</a></li>
+                    <li><a href="Onas.html">O nas</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Inne</a>
+                <ul class="submenu">
+                    <li><a href="Kalkulator.html">Kalkulator Opłat Parkingowych</a></li>
+                    <li><a href="Mapa.html">Parking</a></li>
+                    <li><a href="Galeria.html">Poszukiwani</a></li>
+                    <li><a href="Kółko.html">Kółko i krzyżyk</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Kontakt</a>
+                <ul class="submenu">
+                    <li><a href="Formularz.html">Formularz Kontaktowy</a></li>
+                    <li><a href="Tabela.html">Dyżury Pracowników</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="image-container">
+                <img id="current-image" src="images/image1.jpg" alt="Image 1">
+            </div>
+            <div class="details">
+                <h3>Poszukiwana osoba:</h3>
+                <p id="person-name"></p>
+                <p id="person-age"></p>
+                <p id="person-traits"></p>
+                <p id="person-crime"></p>
+            </div>
+            <div class="controls">
+                <button id="first-btn">Pierwszy</button>
+                <button id="prev-btn">Poprzedni</button>
+                <button id="next-btn">Następny</button>
+                <button id="last-btn">Ostatni</button>
+            </div>
+        </div>
+    </div>
+    <script src="Galeria.js"></script>
+    <article>
+    </article>
+    <aside>
+    </aside>
+    <footer>
+        <p>&copy; 2024 Posterunek Policji</p> <br>
+        Filip Wolf „Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka.”
+    </footer>
+</body>
+</html>

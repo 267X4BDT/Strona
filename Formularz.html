@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Zgłoszeniowy</title>
+    <link rel="stylesheet" href="Formularz.css">
+</head>
+<body>
+    <header>
+        <h2>Zgłoszenie</h2>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="Szablon - Kopia.html">Strona główna</a></li>
+            <li>
+                <a href="Aktualności.html">Aktualności</a>
+            </li>
+            <li>
+                <a href="#">O policji</a>
+                <ul class="submenu">
+                    <li><a href="Prezentacja.html">Dołącz do nas</a></li>
+                    <li><a href="Onas.html">O nas</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Inne</a>
+                <ul class="submenu">
+                    <li><a href="Kalkulator.html">Kalkulator Opłat Parkingowych</a></li>
+                    <li><a href="Mapa.html">Parking</a></li>
+                    <li><a href="Galeria.html">Poszukiwani</a></li>
+                    <li><a href="Kółko.html">Kółko i krzyżyk</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Kontakt</a>
+                <ul class="submenu">
+                    <li><a href="Formularz.html">Formularz Kontaktowy</a></li>
+                    <li><a href="Tabela.html">Dyżury Pracowników</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <form id="myForm">
+        <label for="imie">Imię i nazwisko:</label><br>
+        <input type="text" id="imie" name="imie" required><br>
+
+        <label for="email">Adres e-mail:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="numer_telefonu">Numer telefonu:</label><br>
+        <input type="tel" id="numer_telefonu" name="numer_telefonu" required><br>
+
+        <label for="typ_zgloszenia">Typ zgłoszenia:</label><br>
+        <select id="typ_zgloszenia" name="typ_zgloszenia" required>
+            <option value="">Wybierz typ zgłoszenia</option>
+            <option value="wykroczenie">Wykroczenie</option>
+            <option value="przestepstwo">Przestępstwo</option>
+            <option value="wykroczenie">Zdarzenie</option>
+            <option value="pomoc">Pomoc</option>
+            <option value="dołącz do nas">Dołącz do nas</option>
+        </select><br>
+
+        <label for="opis">Opis zdarzenia:</label><br>
+        <textarea id="opis" name="opis" rows="4" required></textarea><br>
+
+        <label for="adres">Adres zamieszkania:</label><br>
+        <input type="text" id="adres" name="adres"><br>
+
+        <label for="data_urodzenia">Data urodzenia:</label><br>
+        <input type="date" id="data_urodzenia" name="data_urodzenia" max="31-12-2024" required><br>
+
+        <label for="zdjecie">Zdjęcie:</label><br>
+        <input type="file" id="zdjecie" name="zdjecie"><br>
+
+        <input type="checkbox" id="potwierdzenie" name="potwierdzenie" required>
+        <label for="potwierdzenie">Potwierdzam prawdziwość zgłoszenia</label><br>
+
+        <input type="submit" value="Wyślij zgłoszenie">
+    </form>
+    <div id="response"></div>
+    <footer>
+        <p>&copy; 2024 Posterunek Policji</p> <br>
+        Filip Wolf „Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka.”
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+            var birthDate = new Date(document.getElementById('data_urodzenia').value);
+            var today = new Date();
+            var maxDate = new Date("31-12-2024");
+
+            if (birthDate > today || birthDate > maxDate) {
+                alert('Proszę wprowadzić poprawną datę urodzenia.');
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

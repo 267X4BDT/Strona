@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking</title>
+    <link rel="stylesheet" href="szablon.css">
+    <style>
+        header {
+            background-image: url('images/image10.jpg');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Parking</h1>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="Szablon - Kopia.html">Strona główna</a></li>
+            <li>
+                <a href="Aktualności.html">Aktualności</a>
+            </li>
+            <li>
+                <a href="#">O policji</a>
+                <ul class="submenu">
+                    <li><a href="Prezentacja.html">Dołącz do nas</a></li>
+                    <li><a href="Onas.html">O nas</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Inne</a>
+                <ul class="submenu">
+                    <li><a href="Kalkulator.html">Kalkulator Opłat Parkingowych</a></li>
+                    <li><a href="Mapa.html">Parking</a></li>
+                    <li><a href="Galeria.html">Poszukiwani</a></li>
+                    <li><a href="Kółko.html">Kółko i krzyżyk</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Kontakt</a>
+                <ul class="submenu">
+                    <li><a href="Formularz.html">Formularz Kontaktowy</a></li>
+                    <li><a href="Tabela.html">Dyżury Pracowników</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <article>
+            <h2>Interaktywna Mapa Terenów</h2>
+            <p>Kliknij na wybrane obszary, aby uzyskać więcej informacji.</p>
+            <div class="gallery-container">
+                <div class="gallery">
+                    <img src="images/image6.jpg" usemap="#PD-map" alt="Mapa terenów firmy">
+                    <map name="PD-map">
+                        <area shape="rect" coords="226,42,342,157" alt="Strefa Parkowania 1" href="Kalkulator.html">
+                        <area shape="rect" coords="230,292,347,402" alt="Strefa Parkowania 2" href="Kalkulator.html">
+                        <area shape="rect" coords="976,20,1093,131" alt="Strefa Parkowania 3" href="Kalkulator.html">
+                        <area shape="rect" coords="501,196,580,262" alt="Punkt Opłat Parkingowych" href="Kalkulator.html">
+                        <area shape="poly" coords="777,161,777,228,894,228,894,380,777,380,777,424,1291,424,1294,161" alt="Posterunek Policji" href="Onas.html">
+                        <area id="street" shape="poly" coords="0,435,0,548,1456,548,1454,0,1300,0,1300,437" alt="Ulica" href="">
+                    </map>
+                </div>
+            </div>
+        </article>
+    </main>
+    <script>
+        function showStreetName() {
+            var streetName = "Ulica Politechniczna";
+            alert(streetName);
+        }
+        document.getElementById('street').addEventListener('click', showStreetName);
+    </script>
+    <footer>
+        <p>&copy; 2024 Posterunek Policji</p>
+        <br>
+        Filip Wolf „Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka.”
+    </footer>
+</body>
+</html>

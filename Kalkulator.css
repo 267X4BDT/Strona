@@ -1,0 +1,137 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: ghostwhite;
+    color: black;
+}
+
+header {
+    background-image: url('images/image10.jpg');
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: midnightblue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+            }
+
+article {
+    padding: 20px;
+    text-align: center;
+}
+
+aside {
+    background-color: lightskyblue;
+    padding: 20px;
+}
+
+footer {
+    background-color: midnightblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .menu > li {
+        position: relative;
+        display: inline-block;
+    }
+
+        .menu > li > a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    box-shadow: 0 8px 16px #003366;
+    z-index: 1;
+    border-radius: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+    .submenu li {
+        display: block;
+    }
+
+        .submenu li a {
+            padding: 10px;
+            color: black;
+            display: block;
+        }
+
+.menu > li:hover > a {
+    background-color: steelblue;
+    height: 100%;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+    .menu li:hover .submenu li:hover a {
+        background-color: lightgrey;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+    form label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    form select, form input[type="number"] {
+        margin-bottom: 10px;
+        padding: 5px;
+        width: 200px;
+    }
+
+    form button {
+        padding: 10px 20px;
+        background-color: #003366;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        form button:hover {
+            background-color: steelblue;
+        }
